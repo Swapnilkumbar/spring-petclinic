@@ -1,6 +1,6 @@
 pipeline{  
     environment {
-    registry = "swapnilkumbar/spring-petclinic"
+    registry = "Swapnilkumbar/spring-petclinic"
     }
   agent any
   stages {
@@ -9,7 +9,9 @@ pipeline{
            steps {
                 
                    sh 'pwd'
-                   sh 'docker build .'
+                   sh 'docker build -t dockerimage .'
+                   sh 'docker images ls'
+                   sh 'grype dockerimage --scope all-layers'
                       }
        }
        
