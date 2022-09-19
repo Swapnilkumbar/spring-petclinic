@@ -1,6 +1,6 @@
 pipeline{  
     environment {
-    registry = "Swapnilkumbar/spring-petclinic"
+    registry = "swapnilkumbar/spring-petclinic"
     }
   agent any
   stages {
